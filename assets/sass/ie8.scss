@@ -4,20 +4,10 @@
 @import 'libs/skel';
 
 /*
-	Phantom by HTML5 UP
+	Multiverse by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-/* Form */
-
-	form {
-		.field {
-			float: none !important;
-			width: 100% !important;
-			padding-left: 0 !important;
-		}
-	}
 
 /* Button */
 
@@ -26,67 +16,39 @@
 	input[type="button"],
 	button,
 	.button {
-		border: solid 2px _palette(fg) !important;
-
-		&:hover {
-			border-color: _palette(accent1) !important;
-		}
+		border: solid 2px _palette(border);
 
 		&.special {
-			border: none !important;
+			border: 0;
 		}
 	}
 
-/* Tiles */
+/* Panel */
 
-	.tiles {
-		article {
-			> .image {
-				&:before, &:after {
-					display: none;
-				}
+	.panel {
+		background: _palette(bg);
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+		> .closer {
+			&:before {
+				content: '\00d7';
+				font-size: 42px;
 			}
 		}
 	}
 
-/* Header */
+/* Main */
 
-	#header {
-		.logo {
-			.symbol {
-				display: none;
-			}
-		}
-
-		nav {
-			ul {
-				li {
-					a[href="#menu"] {
-						text-indent: 0;
-						width: auto;
-						font-size: 0.8em;
-
-						&:before, &:after {
-							display: none;
-						}
-					}
-				}
-			}
-		}
-	}
-
-/* Footer */
-
-	#footer {
-		> .inner {
-			section {
-				width: 50%;
-				margin-left: 3em;
-
-				&:first-child {
-					margin-left: 0;
-					width: 40%;
-				}
+	#main {
+		.thumb {
+			> h2 {
+				text-align: center;
+				width: 100%;
+				left: 0;
 			}
 		}
 	}
